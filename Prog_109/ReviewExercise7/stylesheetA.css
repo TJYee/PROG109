@@ -1,0 +1,20 @@
+#wrapper {
+	border-radius: 25px;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: beige;
+	width: 500px;
+}
+
+#message {
+	border-radius: 5px;
+	margin: 0 auto;
+	padding: 5px;
+	background-color: white;
+	width: 450px;
+}
+
+body {
+	padding: 20px;
+	font-family: Helvetica, Arial;
+}

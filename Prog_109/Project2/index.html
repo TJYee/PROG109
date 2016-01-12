@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Project 2 - Improved Number Guessing Game</title>
+	<link href="styles.css" rel="stylesheet" />
+	<script src="myScripts.js"></script>
+</head>
+
+<body>
+	<div id="wrapper">
+		<h1 id="title">Number Guessing Game</h1>
+		<hr />
+		<div id="startScreen">
+			<p id="intro">
+				I'm thinking of a number from <span class="emphasis">1 to 50</span>.<br />
+				You have <span class="emphasis">6</span> attempts to guess my number.<br />
+				I <span class="emphasis">HIGHLY</span> recommend you answer correctly.<br />
+				<br />
+				Are you ready?
+			</p>
+			<p id="picture">
+				<img src="thinking.png" alt="Thinking Photo" width="200" height="271"/>
+			</p>
+			<br />
+			<button id="startBtn">I'm Ready</button>
+			<hr />
+			<br />
+		</div>
+		<div id="gameScreen">
+			<p>You have 6 attempts total. Good luck!</p>
+			<p>Number of guesses remaining: <span class="emphasis" id="counter"></span></p>
+			<label for="inputGuess">Enter your guess here:</label><textarea id="inputGuess" name="inputGuess" rows="1" cols="2"></textarea><button id="guessBtn">Submit Your Guess!</button>
+			<p>Game Progress:<br /></p>
+			<p id="output"></p>
+			<p id="results"></p>
+			<hr />
+			<button id="restart">Restart Game</button>
+		</div>
+		
+	</div>
+</body>
+</html>

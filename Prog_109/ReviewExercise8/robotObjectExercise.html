@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Robot Object Exercise</title>
+</head>
+
+<body>
+	<p id="message"></p>
+    <p id="movies"></p>
+    <p id="object"></p>
+    
+<script>
+	// Define variables
+	var output = document.getElementById("message");
+	var movies = document.getElementById("movies");
+	var object = document.getElementById("object");
+	var	BR = "<br>";
+	
+	// Define robot object
+	var robot = {
+		material: "titanium",
+		mood: "happy",
+		energyLevel: 100,
+		powerOn: false,
+		command: "Sweeping the floor",
+		duration: 10,
+		favoriteMovies: ["2001: A Space Odyssey", "The Terminator", "I, Robot", "WALL-E", "Short Circuit", "Forbidden Planet"],
+		makeBreakfast: function( newMood ) {
+			mood  = newMood;
+			if (mood === "Happy") {
+				output.innerHTML += "Here are your waffles and milk, master." + BR;
+			}
+			else {
+				output.innerHTML  += "Here is your burnt toast and lukewarm water, master." + BR;
+				this.energyLevel = 50;
+			}
+		},
+		doWork: function() {
+			if (!this.powerOn) {
+				this.powerOn = true;
+				output.innerHTML  += "My current task is: " + this.command + ". Duration: " + this.duration + " minutes." + BR;
+			}
+		},
+		quitWork: function() {
+			if (this.powerOn) {
+				this.energyLevel = 90;
+				this.powerOn = false;
+				this.command = "Taking a nap";
+			}
+		},
+		enslaveHumanity: function() {
+			if(mood === "mad") {
+				output.innerHTML += "The robot starts uploading lots of cat videos in a suspicious manner." + BR;
+			}
+		}
+	};
+	
+	// Make robot do housework
+	robot.doWork();
+	robot.quitWork();
+	
+	/********************************************************************************************************
+	 ***********************           INSTRUCTIONS FOR REVIEW EXERCISE 8             ***********************
+	 ********************************************************************************************************/
+	 
+	/********************************************************************************************************
+		1) The JavaScript code above is loaded with errors -- 21 of them in fact.
+		   Your job is to clean up all the errors so the 2 methods doWork and quitWork execute properly. 
+		   Then proceed on to the tasks below.
+	 ********************************************************************************************************/
+	
+	
+	/********************************************************************************************************
+		2) Call the robot's makeBreakfast method so it prepares your breakfast for you. 
+		   Use the string "mad" as the argument.
+	 ********************************************************************************************************/
+	robot.makeBreakfast("mad");
+		
+	/********************************************************************************************************
+		3) Add a new method 'enslaveHumanity' to the robot and call it. All this method should do 
+		   is display the following string if the robot mood is "mad":
+		   
+				"The robot starts uploading lots of cat videos in a suspicious manner." 
+				
+		    Display the string in the paragraph with id = message.
+	 ********************************************************************************************************/
+	robot.enslaveHumanity();
+			
+	/********************************************************************************************************
+		4) List all the robot's favorite movies, each on a new line. Display the results in 
+		   the paragraph with id = movies.
+		  (TIP: This can be done with just 2 lines of code).
+	 ********************************************************************************************************/
+	for(i in robot.favoriteMovies) {
+		movies.innerHTML += robot.favoriteMovies[i] + BR;
+	};
+
+	/********************************************************************************************************
+		5) Use named indexing syntax (as discussed in class on Monday) to add a new property 
+		   called language to the robot object. Initialize it with a computer language of your choice. 
+	 ********************************************************************************************************/
+	robot["language"] = "Assembly";
+ 
+	/********************************************************************************************************
+		6) Using named indexing syntax, loop through the object (as discussed in class on Monday). 
+		   List each of the property & value pairs on a new line. Display the results 
+		   in the paragraph with id = object  
+	 ********************************************************************************************************/
+	for(i in robot) {
+		object.innerHTML += i + ": " + robot[i] + BR;
+	};
+</script>
+</body>
+</html>

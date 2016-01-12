@@ -1,0 +1,98 @@
+﻿body {
+ 	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+ 	margin: 0;
+	font-size: 100%;
+}
+
+header.siteHeader {
+	border: 5px solid #3F57A3;
+ 	width: 900px;
+ 	padding: 0;
+	height: 170px;
+}
+
+aside {
+  	position: absolute;
+  	top: 180px;
+  	left: 0;
+  	padding: 35px 10px;
+ 	width: 205px;
+  	min-height: 1500px;
+  	background-color:#eee;
+ 	font-size: 1em;
+  	background-image: url(../images/bkgZombieSign.jpg);
+  	background-repeat: no-repeat;
+}
+
+button {
+	margin-left: 20px;
+	border-radius: 10px;
+	margin-top: 240px;
+	width: 160px;
+	height: 30px;
+	font-size: .9em;
+	background-color: #3F57A3;
+	color: white;
+	outline: none;
+}
+
+article {
+ 	margin-left: 240px;
+  	padding: 20px;
+  	max-width: 700px;
+  	min-width: 400px;
+}
+
+article p {
+  	margin-top: 0px;
+}
+
+header.articleHeader {
+  	padding: 10px;
+  	margin: 10px;
+  	text-align: center;
+}
+
+h3 {
+	color: #24486C;
+	margin-bottom: 2px;
+	font-size: 1em;
+}
+
+header.articleHeader h2 {
+  	margin: 0;
+  	font-size: xx-large;
+}
+
+.subheader {
+  	margin: 0px;
+  	font-weight: bold;
+  	color: #24486C;
+}
+	  
+.byline {
+  	font-style: italic;
+  	font-size: small;
+  	margin: 0;
+}
+
+.floatImage {
+  	float: right;
+  	margin-left: 20px;
+} 
+
+.floatImage figcaption {
+  	max-width: 250px;
+  	font-size: small;
+  	font-style: italic;
+  	margin-bottom: 5px;
+}
+
+footer {
+  	margin-left: 240px;
+  	max-width: 700px;
+  	min-width: 400px;
+  	text-align: center;
+  	font-size: small;	
+}
+

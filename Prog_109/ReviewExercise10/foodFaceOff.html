@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Food Face Off Exercise</title>
+    <style>
+		#wrapper {
+			font-family: arial, helvetica, sans-serif;
+			margin: 50px auto;
+			padding: 20px 10px 20px 25px;
+			width: 910px;
+			background-color: #F8F5E9;
+			border: 1px solid gray;
+			box-shadow: 3px 3px 8px 1px rgba(0,0,0,.3);
+		}
+		img.food {
+			padding: 0 20px 5px 0;
+			cursor: pointer;
+		}
+		h1,h2 {
+			margin: 0;
+			padding: 10px 0 5px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="wrapper">
+    	<h1>Food Face-Off</h1>
+        <hr>
+        <!-- top row -->
+        <h2>Choose a food:</h2>
+    	<img src="images/salad.jpg" class="food">
+        <img src="images/pizza.jpg" class="food">
+        <img src="images/medicine.jpg" class="food">
+        
+        <!-- bottom row -->
+        <h2>Your choice:</h2>
+        <img src="images/noChoice.jpg" id="choice">   
+	</div>
+    
+    <script>
+		// variable declarations
+		// 1) Fill in the blanks so the proper style attribute values are supplied
+		var foodList = document.getElementsByClassName("food");           // Build nodelist
+		var imgChoice = document.getElementById("choice");				 // Get referece to image element
+	
+		// arrays of image pathnames corresponding to:
+		// 1) default images displayed in the top row
+		// 2) rollover image that is displayed when we mouse over a default image 
+		// 3) image that is displayed in the bottom row when we click on an image in the top row
+		var defaultArray =  ["images/salad.jpg", "images/pizza.jpg", "images/medicine.jpg"];
+		var rolloverArray = ["images/salad_over.jpg", "images/pizza_over.jpg", "images/medicine_over.jpg"];
+		var choiceArray   = ["images/salad_choice.jpg", "images/pizza_choice.jpg", "images/medicine_choice.jpg"];
+		
+		// event handler declarations
+		var mouseoverHandler = function(event) {
+			var obj = event.target;   // obj is a reference to current image object target 
+			var i = obj.foodIndex;   
+			// 2) Fill in the blanks so the current target is updated with the correct image from rolloverArray
+			obj.src = rolloverArray[i];
+		};
+		
+		var mouseoutHandler = function(event) {
+		    var obj = event.target;    // once again, obj is a reference to current image object target
+			var i = obj.foodIndex;
+			// 3) Fill in the blanks so the current target is updated with the correct image from defaultArray
+			obj.src = defaultArray[i];
+		};
+			
+		var clickHandler = function(event) {
+		    var obj = event.target;    // deja vu all over again, obj is a reference to current image object target
+			var i = obj.foodIndex;
+			// 4) Fill in the blanks so the "Your choice" image is updated with correct image from choiceArray
+			imgChoice.src = choiceArray[i];
+		};
+		
+		// Bind targets to events
+	
+		var imageObject;
+		for (var i=0; i<foodList.length; i++) {
+			// extract current image object from nodelist
+			imageObject = foodList[ i ];
+			
+			// bind event handlers to image object using event listeners
+			// 5) fill in the blanks so the code is correct
+			imageObject.addEventListener("mouseover", mouseoverHandler, false);
+			imageObject.addEventListener("mouseout", mouseoutHandler, false);
+			imageObject.addEventListener("click", clickHandler, false);
+			
+			// new index property for each image object -- this will identify the current object 
+			// once we get into an event handler
+			imageObject.foodIndex = i;
+		}
+	</script>
+</body>
+</html>

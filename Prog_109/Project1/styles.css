@@ -1,0 +1,16 @@
+body {
+	background-color: beige;
+	font-family: Helvetica, Arial;
+}
+
+#wrapper {
+	background-color: #E6E6E6;
+	width: 450px;
+	height: 450px;
+	border-radius: 25px;
+	padding: 50px;
+}
+
+#header {
+	text-align: center;
+}

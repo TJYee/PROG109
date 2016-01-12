@@ -1,0 +1,92 @@
+body {
+	background-color: beige;
+	font-family: Helvetica, Arial;
+	background-image: url("question_mark.jpg");
+}
+
+button{
+	padding: 10px;
+	margin: 5px 5px;
+	border-radius: 15px;
+	background-color: pink;
+	display: inline-block;
+	width: 200px;
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+}
+
+textarea{
+	overflow: hidden;
+	padding: 10px;
+	resize: none;
+	font-family: Helvetica, Arial;
+	font-style: italic;
+	font-weight: bold;
+	color: red;
+	font-size: 15px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 10px;
+	margin-right: 15px;
+}
+
+#wrapper {
+	margin: 0 auto;
+	background-color: #E6E6E6;
+	width: 600px;
+
+	border-radius: 25px;
+	border: 1px solid black;
+	padding: 10px;
+	
+}
+
+#title {
+	text-align: center;
+}
+
+#startScreen{
+	display: block;
+}
+
+#intro{
+	display: inline-block;
+	width: 325px;
+	height: 200px;
+	vertical-align: middle;
+	line-height: 40px;
+}
+
+#picture{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#startBtn{
+	display: block;
+	margin: 0 auto;
+	font-size: 20px;
+}
+
+#gameScreen{
+	display: none;
+}
+
+#output{
+	color: red;
+}
+
+#restart{
+	display: block;
+	margin: 0 auto;
+	background-color: grey;
+	color: white;
+}
+
+span.emphasis {
+	color: red;
+	font-style: italic;
+	font-weight: bold;
+}
+

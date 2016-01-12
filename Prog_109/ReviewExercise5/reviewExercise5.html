@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Review Exercise 5</title>
+	<script>
+		var shirtPrice = 20.50;
+		var hatPrice = 5.95;
+		var salesTax = 11;
+		var discount = 5;
+		var total;
+		var shirts = parseInt(prompt("How many shirts do you want to buy?", "Enter quantity from 1 to 10"));
+		var hats = parseInt(prompt("How many hats do you want to buy?", "Enter quantity from 1 to 10"));
+		total = ((((shirts * shirtPrice) + (hats * hatPrice)) * ((salesTax * 0.01) + 1)) - discount);
+		total = total.toFixed(2);
+		document.write("Shirts bought: " + shirts + "<br>Hats bought: " + hats + "<br>Total price: $" + total);
+	</script>
+</head>
+
+<body>
+
+</body>
+</html>

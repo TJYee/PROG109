@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Project 3 - Rock-Paper-Scissors Game</title>
+	<link href="css/myStyles.css" rel="stylesheet" />
+	<script src="js/myScripts.js"></script>
+</head>
+
+<body>
+	<div id="wrapper">
+		<h1 id="header"><span id="title">Rock Paper Scissors Match</span><br />
+			<span id="subtitle">Prove Your Worth!</span></h1>
+		<div id="startScreen">
+			<img id="instructions" src="images/instruction.png" alt="Instructions to play Rock Paper Scissors" /><br />
+			<p>You're going to play this computer at 10 rounds of Rock Paper Scissors.<br />
+				Don't know how to play? Look at the picture above. Pick one of those options and don't lose.<br />
+				The game is REALLY fair. Mostly fair, at least.<br />
+				What happens if you lose? Don't worry about it.<br />
+				I also recommend waiting for the computer to make it's choices. Be polite.<br /
+				Click the button!</p>
+			<button id="startBtn">Start Match!</button>
+		</div>
+		<div id="gameScreen">
+			<p>Player Selection</p>
+			<img class="player" src="images/player_idle_rock.png" alt="Player Rock" />
+			<img class="player" src="images/player_idle_paper.png" alt="Player Paper" />
+			<img class="player" src="images/player_idle_scissors.png" alt="Player Scissors" />
+			<br />
+			<div id="score">
+				<p id="roundStatus">Results</p>
+				<p>Human selects: <span id="playerMove"></span></p>
+				<p>COM selects: <span id="comMove"></span></p>
+				<p>Outcome: <span id="outcome"></span></p>
+				<p id="tally">Score</p>
+			</div>
+			<p>Computer Selection</p>
+			<img class="computer" src="images/com_idle_rock.png" alt="Computer Rock" />
+			<img class="computer" src="images/com_idle_paper.png" alt="Computer Paper" />
+			<img class="computer" src="images/com_idle_scissors.png" alt="Computer Scissors" />
+			<br />
+			<button id="endBtn">Continue to Results</button>
+		</div>
+		<div id="endScreen">
+			<p id="results"></p>
+			<img id="resultImage" src="images/win.png" alt="Result image" />
+			<p id="resultMessage"></p>
+			<button id="restartBtn">Play again?</button>
+		</div>
+	</div>
+</body>
+</html>
